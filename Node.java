@@ -1,5 +1,16 @@
+/*
+ * NAME: Cindy Huynh
+ * DATE: 4/5/19
+ */
+
 import java.util.*;
 
+/**
+ * This class creates node objects that can have children and value.
+ *
+ * @author Cindy Huynh
+ * @since 4/5/19
+ */
 public class Node {
   private int value = 0;
   private List<Node> children = new ArrayList<>();
