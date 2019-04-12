@@ -32,7 +32,7 @@ public class challenge {
     //create a new node and inserting into hashmap for each alphabet for easy
     //access
     for (int i = 0; i < alphabet.length; i++) {
-      map.put(alphabet[i], new Node(0));
+      map.put(alphabet[i], new Node(0, alphabet[i]));
     }
 
     //building the tree by linking all the nodes with their respective children
@@ -55,10 +55,10 @@ public class challenge {
     G_node.addChild(map.get("M"));
 
     Node L_node = map.get("L");
+    L_node.addChild(map.get("N"));
     L_node.addChild(map.get("O"));
     L_node.addChild(map.get("P"));
     L_node.addChild(map.get("Q"));
-    L_node.addChild(map.get("N"));
 
     Node Q_node = map.get("Q");
     Q_node.addChild(map.get("R"));
@@ -107,7 +107,8 @@ public class challenge {
       valChange(root);
 
       //printing the classification report with the letter and the value
-      //separated by a tab
+      //separated by a tab using a HashMap
+      /*
       for (Map.Entry<String, Node> obj : map.entrySet()) {
         String letter = obj.getKey();
         Node node = obj.getValue();
@@ -116,6 +117,9 @@ public class challenge {
           System.out.println(letter + " " + node.getValue());
         }
       }
+      */
+      
+      root.printTree();
   }
 
   /**
